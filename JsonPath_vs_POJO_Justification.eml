@@ -1,0 +1,87 @@
+Subject:
+ Justification: Choosing JsonPath over POJOs for Automation JSON Handling
+From: your.email@example.com
+To: team@example.com
+MIME-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="===============8386960093044846608=="
+
+--===============8386960093044846608==
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+
+This email requires an HTML viewer to display properly.
+
+--===============8386960093044846608==
+Content-Type: text/html; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+MIME-Version: 1.0
+
+
+<html>
+<body>
+<p>Hi Team,</p>
+
+<p>After evaluating both <strong>POJO-based deserialization</strong> and <str=
+ong>JsonPath-based dynamic manipulation</strong> approaches for handling comp=
+lex JSON payloads in our test automation framework, I recommend moving forwar=
+d with <strong>JsonPath</strong> for the following reasons:</p>
+
+<h3>=E2=9C=85 Use Case Summary</h3>
+<ul>
+<li><strong>Deeply nested</strong> JSON with arrays/objects (e.g., datasets =
+=E2=86=92 datasetElements =E2=86=92 reportAttributes)</li>
+<li><strong>Partial and dynamic updates</strong> (e.g., names, catalog IDs)</=
+li>
+<li>Used primarily in <strong>POST operations</strong> in automation</li>
+<li>Requires <strong>response validation</strong> for updated fields</li>
+</ul>
+
+<h3>=F0=9F=94=8D Comparison Table</h3>
+<table border=3D"1" cellpadding=3D"6" cellspacing=3D"0">
+<tr><th>Feature / Criteria</th><th>POJO (Plain Old Java Object)</th><th>JsonP=
+ath</th></tr>
+<tr><td>=F0=9F=94=81 Partial field updates</td><td>=E2=9D=8C Difficult =E2=80=
+=93 full object mapping</td><td>=E2=9C=85 Easy =E2=80=93 update via path</td>=
+</tr>
+<tr><td>=F0=9F=A7=B1 Boilerplate code</td><td>=E2=9D=8C High =E2=80=93 many J=
+ava classes</td><td>=E2=9C=85 None =E2=80=93 work with raw JSON</td></tr>
+<tr><td>=E2=9A=A1 Dynamic data injection</td><td>=E2=9D=8C Limited</td><td>=
+=E2=9C=85 Highly flexible</td></tr>
+<tr><td>=F0=9F=A7=AA Test automation efficiency</td><td>=E2=9D=8C Slower setu=
+p</td><td>=E2=9C=85 Fast and reusable</td></tr>
+<tr><td>=F0=9F=94=8D Read/Assert specific values</td><td>=E2=9D=8C Verbose</t=
+d><td>=E2=9C=85 One-liner with JsonPath</td></tr>
+<tr><td>=F0=9F=94=84 Post-operation (JSON as payload)</td><td>=E2=9C=85 Good =
+for full objects</td><td>=E2=9C=85 Best for templates/partials</td></tr>
+<tr><td>=F0=9F=94=A7 Schema/type safety</td><td>=E2=9C=85 Compile-time safety=
+</td><td>=E2=9D=8C Runtime only</td></tr>
+</table>
+
+<h3>=E2=9C=85 Why JsonPath is the Better Fit</h3>
+<ul>
+<li>We're <strong>not building domain models</strong>, just modifying JSON fo=
+r tests.</li>
+<li>POJOs add complexity for deeply nested structures.</li>
+<li><strong>JsonPath enables fast, flexible, low-code manipulation</strong>.<=
+/li>
+</ul>
+
+<h3>=F0=9F=94=9A Conclusion</h3>
+<p>
+For our use case =E2=80=94 automation testing with dynamic updates to JSON pa=
+yloads and partial response validation =E2=80=94 <strong>JsonPath offers grea=
+ter flexibility, lower overhead, and faster development</strong> compared to =
+POJOs.
+</p>
+
+<p>Please let me know if you'd like a sample project template or code walkthr=
+ough.</p>
+
+<p>Best regards,<br>
+Your Name</p>
+
+</body>
+</html>
+
+--===============8386960093044846608==--
